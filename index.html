@@ -3,435 +3,325 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hamed Ouattara — Multidisciplinary Artist & Designer. Represented by Friedman Benda Gallery (NYC). Collections: V&A, Centre Pompidou, Vitra, Brooklyn Museum, Denver Art Museum.">
-<title>Hamed Ouattara · Studio Hamed Ouattara</title>
+<title>Hamed Ouattara · Studio Hamed Ouattara (SHO)</title>
+<meta name="description" content="Hamed Ouattara — Multidisciplinary Artist & Designer. Studio Hamed Ouattara (SHO). Represented by Friedman Benda Gallery, New York. Collections: V&A, Centre Pompidou, Vitra, Brooklyn Museum, Denver Art Museum.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 20px 32px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  object-fit: cover;
+}
+
+.name {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: #a0a0a0;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.gallery {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #d4af7a;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: #666666;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  margin-top: 24px;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.section-title:first-of-type {
+  margin-top: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  background: #1a1a1a;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  background: #252525;
+  border-color: #3a3a3a;
+  transform: translateY(-1px);
+}
+
+.link-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.link-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.link-sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.link-arrow {
+  font-size: 18px;
+  color: #666666;
+  margin-left: 12px;
+}
+
+.featured {
+  background: linear-gradient(135deg, #1a1a1a 0%, #252018 100%);
+  border-color: #3a2f1f;
+}
+
+.featured .link-title {
+  color: #d4af7a;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: #1a1a1a;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+  background: #252525;
+  border-color: #3a3a3a;
+}
+
+.copy-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  background: transparent;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  color: #888888;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  border-color: #3a3a3a;
+  color: #ffffff;
+}
+
+.copy-btn.copied {
+  color: #d4af7a;
+  border-color: #3a2f1f;
+}
+
+.footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #1a1a1a;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-line {
+  font-size: 11px;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+.footer-ifu {
+  font-size: 10px;
+  color: #444444;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 400px) {
+  .name {
+    font-size: 24px;
   }
-  
-  html, body {
-    background-color: #0a0a0a;
-    color: #ffffff;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .container {
-    max-width: 560px;
-    margin: 0 auto;
-    padding: 48px 24px 40px;
-  }
-  
-  /* HEADER */
-  .header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .logo {
-    width: 88px;
-    height: 88px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    margin: 0 auto 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: #0a0a0a;
-    letter-spacing: -1px;
-    box-shadow: 0 8px 32px rgba(255,255,255,0.08);
-  }
-  
-  .logo span {
-    display: block;
-    line-height: 0.85;
-    text-align: center;
-  }
-  
-  .logo .s { font-size: 24px; }
-  .logo .ho { font-size: 26px; }
-  
-  h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    margin-bottom: 8px;
-  }
-  
-  .subtitle {
-    font-size: 14px;
-    font-weight: 400;
-    color: #a0a0a0;
-    line-height: 1.5;
-    margin-bottom: 4px;
-  }
-  
   .gallery {
-    font-size: 13px;
-    font-weight: 500;
-    color: #ffffff;
-    margin-top: 12px;
-    margin-bottom: 16px;
-  }
-  
-  .location {
-    font-size: 12px;
-    font-weight: 400;
-    color: #888;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-  
-  .museums {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-    margin-bottom: 8px;
-  }
-  
-  .museum-badge {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    border: 1px solid #333;
-    border-radius: 20px;
-    color: #ccc;
-  }
-  
-  /* SECTIONS */
-  .section {
-    margin-bottom: 28px;
-  }
-  
-  .section-title {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #888;
-    margin-bottom: 12px;
-    padding-left: 4px;
-  }
-  
-  /* LINKS */
-  .link {
-    display: flex;
-    align-items: center;
-    padding: 16px 20px;
-    margin-bottom: 10px;
-    background: #141414;
-    border: 1px solid #222;
-    border-radius: 14px;
-    color: #ffffff;
-    text-decoration: none;
-    transition: all 0.25s ease;
     font-size: 14px;
-    font-weight: 500;
   }
-  
-  .link:hover {
-    background: #1c1c1c;
-    border-color: #444;
-    transform: translateY(-1px);
-  }
-  
-  .link-icon {
-    font-size: 18px;
-    margin-right: 14px;
-    min-width: 24px;
-    text-align: center;
-  }
-  
-  .link-content {
-    flex: 1;
-  }
-  
-  .link-title {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 2px;
-  }
-  
-  .link-desc {
-    font-size: 12px;
-    color: #888;
-    font-weight: 400;
-  }
-  
-  .arrow {
-    color: #666;
-    font-size: 16px;
-    transition: transform 0.25s ease;
-  }
-  
-  .link:hover .arrow {
-    transform: translateX(3px);
-    color: #fff;
-  }
-  
-  /* COPY BUTTON */
-  .copy-btn {
-    display: block;
-    width: 100%;
-    padding: 14px 20px;
-    margin-top: 16px;
-    background: transparent;
-    border: 1px solid #333;
-    border-radius: 14px;
-    color: #fff;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.25s ease;
-  }
-  
-  .copy-btn:hover {
-    background: #fff;
-    color: #0a0a0a;
-    border-color: #fff;
-  }
-  
-  .copy-btn.copied {
-    background: #2a2a2a;
-    color: #4ade80;
-    border-color: #4ade80;
-  }
-  
-  /* FOOTER */
-  .footer {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid #1f1f1f;
-    text-align: center;
-  }
-  
-  .footer-text {
-    font-size: 11px;
-    color: #555;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
-  }
-  
-  .footer-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 13px;
-    color: #888;
-    margin-bottom: 4px;
-  }
-  
-  /* RESPONSIVE */
-  @media (max-width: 480px) {
-    .container {
-      padding: 32px 20px 32px;
-    }
-    
-    h1 {
-      font-size: 24px;
-    }
-    
-    .logo {
-      width: 76px;
-      height: 76px;
-    }
-    
-    .logo .s { font-size: 20px; }
-    .logo .ho { font-size: 22px; }
-  }
+}
 </style>
 </head>
 <body>
 
 <div class="container">
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo">
-      <span>
-        <span class="s">s.</span>
-        <span class="ho">ho</span>
-      </span>
+  <img src="logo-sho.jpg" alt="Studio Hamed Ouattara" class="logo">
+
+  <h1 class="name">Hamed Ouattara</h1>
+  <p class="subtitle">Multidisciplinary Artist & Designer</p>
+  <p class="gallery">represented by Friedman Benda, New York</p>
+
+  <div class="section-title">Gallery & Exhibitions</div>
+
+  <a href="https://www.friedmanbenda.com/exhibitions/hamed-ouattara-bolibana/" target="_blank" rel="noopener" class="link featured">
+    <div class="link-content">
+      <span class="link-title">Friedman Benda Gallery</span>
+      <span class="link-sub">BOLIBANA — Solo Exhibition, New York</span>
     </div>
-    <h1>Hamed Ouattara</h1>
-    <p class="subtitle">Multidisciplinary Artist & Designer</p>
-    <p class="gallery">Represented by Friedman Benda Gallery · New York</p>
-    <p class="location">Ouagadougou · Atlanta</p>
-    
-    <div class="museums">
-      <span class="museum-badge">V&A</span>
-      <span class="museum-badge">Pompidou</span>
-      <span class="museum-badge">Vitra</span>
-      <span class="museum-badge">Brooklyn</span>
-      <span class="museum-badge">Denver</span>
+    <span class="link-arrow">→</span>
+  </a>
+
+  <a href="https://www.homofaber.com/" target="_blank" rel="noopener" class="link">
+    <div class="link-content">
+      <span class="link-title">Homo Faber 2026</span>
+      <span class="link-sub">Venice · September 2026</span>
     </div>
-  </header>
+    <span class="link-arrow">→</span>
+  </a>
 
-  <!-- SITES OFFICIELS -->
-  <section class="section">
-    <h2 class="section-title">Sites officiels</h2>
-    
-    <a href="https://hamedouattara.com" target="_blank" class="link">
-      <span class="link-icon">🏛️</span>
-      <div class="link-content">
-        <div class="link-title">Portfolio institutionnel</div>
-        <div class="link-desc">hamedouattara.com</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="https://studiohamedouattara.com" target="_blank" class="link">
-      <span class="link-icon">🛒</span>
-      <div class="link-content">
-        <div class="link-title">Studio & Boutique</div>
-        <div class="link-desc">studiohamedouattara.com</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-  </section>
+  <div class="section-title">Social Media</div>
 
-  <!-- GALERIE & EXPOSITIONS -->
-  <section class="section">
-    <h2 class="section-title">Galerie & Expositions</h2>
-    
-    <a href="https://www.friedmanbenda.com/artists/hamed-ouattara/" target="_blank" class="link">
-      <span class="link-icon">🎨</span>
-      <div class="link-content">
-        <div class="link-title">Friedman Benda Gallery</div>
-        <div class="link-desc">New York · Represented Artist</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="https://www.homofaber.com/" target="_blank" class="link">
-      <span class="link-icon">🌊</span>
-      <div class="link-content">
-        <div class="link-title">Homo Faber 2026</div>
-        <div class="link-desc">Venise · Septembre 2026</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-  </section>
+  <a href="https://www.instagram.com/studiohamedouattara/" target="_blank" rel="noopener" class="link">
+    <div class="link-content">
+      <span class="link-title">Instagram</span>
+      <span class="link-sub">@studiohamedouattara</span>
+    </div>
+    <span class="link-arrow">→</span>
+  </a>
 
-  <!-- RÉSEAUX SOCIAUX -->
-  <section class="section">
-    <h2 class="section-title">Réseaux sociaux</h2>
-    
-    <a href="https://www.instagram.com/studiohamedouattara/" target="_blank" class="link">
-      <span class="link-icon">📸</span>
-      <div class="link-content">
-        <div class="link-title">Instagram</div>
-        <div class="link-desc">@studiohamedouattara</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="https://www.facebook.com/studiohamedouattara" target="_blank" class="link">
-      <span class="link-icon">📘</span>
-      <div class="link-content">
-        <div class="link-title">Studio Hamed Ouattara</div>
-        <div class="link-desc">Facebook · Page officielle</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="https://www.linkedin.com/in/hamed-ouattara/" target="_blank" class="link">
-      <span class="link-icon">💼</span>
-      <div class="link-content">
-        <div class="link-title">LinkedIn</div>
-        <div class="link-desc">Hamed Ouattara</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="https://www.facebook.com/" target="_blank" class="link">
-      <span class="link-icon">✍️</span>
-      <div class="link-content">
-        <div class="link-title">Brasonkabra</div>
-        <div class="link-desc">Facebook · Voix philosophique</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-  </section>
+  <a href="https://www.linkedin.com/in/hamedouattara/" target="_blank" rel="noopener" class="link">
+    <div class="link-content">
+      <span class="link-title">LinkedIn</span>
+      <span class="link-sub">Hamed Ouattara · SHO</span>
+    </div>
+    <span class="link-arrow">→</span>
+  </a>
 
-  <!-- CONTACT -->
-  <section class="section">
-    <h2 class="section-title">Contact</h2>
-    
-    <a href="mailto:studiohamedouattarabf@gmail.com" class="link">
-      <span class="link-icon">📧</span>
-      <div class="link-content">
-        <div class="link-title">Email studio</div>
-        <div class="link-desc">studiohamedouattarabf@gmail.com</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="https://wa.me/22666306363" target="_blank" class="link">
-      <span class="link-icon">💬</span>
-      <div class="link-content">
-        <div class="link-title">WhatsApp</div>
-        <div class="link-desc">+226 66 30 63 63</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="tel:+16463936511" class="link">
-      <span class="link-icon">📱</span>
-      <div class="link-content">
-        <div class="link-title">Phone USA</div>
-        <div class="link-desc">+1 646 393 6511</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-  </section>
+  <a href="https://www.facebook.com/studiohamedouattara" target="_blank" rel="noopener" class="link">
+    <div class="link-content">
+      <span class="link-title">Facebook Studio</span>
+      <span class="link-sub">Studio Hamed Ouattara</span>
+    </div>
+    <span class="link-arrow">→</span>
+  </a>
 
-  <!-- COPY LINK -->
-  <button class="copy-btn" onclick="copyLink(this)">
-    Copier le lien de cette page
-  </button>
+  <a href="https://www.facebook.com/hamed.ouattara.brasonkabra" target="_blank" rel="noopener" class="link">
+    <div class="link-content">
+      <span class="link-title">Facebook BRASONKABRA</span>
+      <span class="link-sub">Philosophical voice</span>
+    </div>
+    <span class="link-arrow">→</span>
+  </a>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-brand">Studio Hamed Ouattara</p>
-    <p class="footer-text">
-      IFU 00014869S<br>
-      © 2026 · All rights reserved
-    </p>
-  </footer>
+  <div class="section-title">Contact</div>
+
+  <div class="contact-grid">
+    <a href="mailto:studiohamedouattarabf@gmail.com" class="contact-link">Email</a>
+    <a href="https://wa.me/22666306363" target="_blank" rel="noopener" class="contact-link">WhatsApp</a>
+  </div>
+
+  <div class="contact-grid">
+    <a href="tel:+22666306363" class="contact-link">+226 66 30 63 63</a>
+    <a href="tel:+16463936511" class="contact-link">+1 646 393 6511</a>
+  </div>
+
+  <button class="copy-btn" onclick="copyLink(this)">Copy this link</button>
+
+  <div class="footer">
+    <p class="footer-line">Studio Hamed Ouattara (SHO)</p>
+    <p class="footer-line">Ouagadougou, Burkina Faso · Atlanta, USA</p>
+    <p class="footer-ifu">IFU 00014869S</p>
+  </div>
 
 </div>
 
 <script>
-  function copyLink(btn) {
-    const url = window.location.href;
-    navigator.clipboard.writeText(url).then(function() {
-      const originalText = btn.innerText;
-      btn.innerText = '✓ Lien copié';
-      btn.classList.add('copied');
-      setTimeout(function() {
-        btn.innerText = originalText;
-        btn.classList.remove('copied');
-      }, 2000);
-    });
-  }
+function copyLink(btn) {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    const originalText = btn.textContent;
+    btn.textContent = '✓ Link copied';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
 </script>
 
 </body>
