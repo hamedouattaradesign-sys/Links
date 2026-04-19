@@ -1,56 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hamed Ouattara — Multidisciplinary Artist & Designer. Represented by Friedman Benda Gallery (NYC). Collections: V&A, Centre Pompidou, Vitra, Brooklyn Museum, Denver Art Museum.">
+<title>Hamed Ouattara · Studio Hamed Ouattara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .container {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 48px 24px 40px;
+  }
+  
+  /* HEADER */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #0a0a0a;
+    letter-spacing: -1px;
+    box-shadow: 0 8px 32px rgba(255,255,255,0.08);
+  }
+  
+  .logo span {
+    display: block;
+    line-height: 0.85;
+    text-align: center;
+  }
+  
+  .logo .s { font-size: 24px; }
+  .logo .ho { font-size: 26px; }
+  
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a0a0a0;
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  
+  .gallery {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .location {
+    font-size: 12px;
+    font-weight: 400;
+    color: #888;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .museums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .museum-badge {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    color: #ccc;
+  }
+  
+  /* SECTIONS */
+  .section {
+    margin-bottom: 28px;
+  }
+  
+  .section-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 12px;
+    padding-left: 4px;
+  }
+  
+  /* LINKS */
+  .link {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .link:hover {
+    background: #1c1c1c;
+    border-color: #444;
+    transform: translateY(-1px);
+  }
+  
+  .link-icon {
+    font-size: 18px;
+    margin-right: 14px;
+    min-width: 24px;
+    text-align: center;
+  }
+  
+  .link-content {
+    flex: 1;
+  }
+  
+  .link-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  
+  .link-desc {
+    font-size: 12px;
+    color: #888;
+    font-weight: 400;
+  }
+  
+  .arrow {
+    color: #666;
+    font-size: 16px;
+    transition: transform 0.25s ease;
+  }
+  
+  .link:hover .arrow {
+    transform: translateX(3px);
+    color: #fff;
+  }
+  
+  /* COPY BUTTON */
+  .copy-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    margin-top: 16px;
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 14px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  .copy-btn:hover {
+    background: #fff;
+    color: #0a0a0a;
+    border-color: #fff;
+  }
+  
+  .copy-btn.copied {
+    background: #2a2a2a;
+    color: #4ade80;
+    border-color: #4ade80;
+  }
+  
+  /* FOOTER */
+  .footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #1f1f1f;
+    text-align: center;
+  }
+  
+  .footer-text {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+  }
+  
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 4px;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 480px) {
+    .container {
+      padding: 32px 20px 32px;
+    }
+    
+    h1 {
+      font-size: 24px;
+    }
+    
+    .logo {
+      width: 76px;
+      height: 76px;
+    }
+    
+    .logo .s { font-size: 20px; }
+    .logo .ho { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
 
-Studio Hamed Ouattara
-Hamed Ouattara
-Multidisciplinary Artist & Designer
-OUAGADOUGOU  ·  ATLANTA
+<div class="container">
 
-V&A · Centre Pompidou · Vitra Design Museum
-Brooklyn Museum · Denver Art Museum
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <span>
+        <span class="s">s.</span>
+        <span class="ho">ho</span>
+      </span>
+    </div>
+    <h1>Hamed Ouattara</h1>
+    <p class="subtitle">Multidisciplinary Artist & Designer</p>
+    <p class="gallery">Represented by Friedman Benda Gallery · New York</p>
+    <p class="location">Ouagadougou · Atlanta</p>
+    
+    <div class="museums">
+      <span class="museum-badge">V&A</span>
+      <span class="museum-badge">Pompidou</span>
+      <span class="museum-badge">Vitra</span>
+      <span class="museum-badge">Brooklyn</span>
+      <span class="museum-badge">Denver</span>
+    </div>
+  </header>
 
-SITES OFFICIELS
+  <!-- SITES OFFICIELS -->
+  <section class="section">
+    <h2 class="section-title">Sites officiels</h2>
+    
+    <a href="https://hamedouattara.com" target="_blank" class="link">
+      <span class="link-icon">🏛️</span>
+      <div class="link-content">
+        <div class="link-title">Portfolio institutionnel</div>
+        <div class="link-desc">hamedouattara.com</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    
+    <a href="https://studiohamedouattara.com" target="_blank" class="link">
+      <span class="link-icon">🛒</span>
+      <div class="link-content">
+        <div class="link-title">Studio & Boutique</div>
+        <div class="link-desc">studiohamedouattara.com</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </section>
 
-🏛
-Studio Hamed Ouattara
-studiohamedouattara.com — Boutique & œuvres
-→
-🎨
-Portfolio institutionnel
-hamedouattara.com
-→
-RÉSEAUX SOCIAUX
+  <!-- GALERIE & EXPOSITIONS -->
+  <section class="section">
+    <h2 class="section-title">Galerie & Expositions</h2>
+    
+    <a href="https://www.friedmanbenda.com/artists/hamed-ouattara/" target="_blank" class="link">
+      <span class="link-icon">🎨</span>
+      <div class="link-content">
+        <div class="link-title">Friedman Benda Gallery</div>
+        <div class="link-desc">New York · Represented Artist</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    
+    <a href="https://www.homofaber.com/" target="_blank" class="link">
+      <span class="link-icon">🌊</span>
+      <div class="link-content">
+        <div class="link-title">Homo Faber 2026</div>
+        <div class="link-desc">Venise · Septembre 2026</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </section>
 
-📷
-Instagram
-@studiohamedouattara
-→
-🔴
-Studio Hamed Ouattara
-Facebook — Page officielle
-→
-✍️
-Hamed Ouattara Brasonkabra
-Facebook — Voix philosophique
-→
-GALERIE & EXPOSITIONS
+  <!-- RÉSEAUX SOCIAUX -->
+  <section class="section">
+    <h2 class="section-title">Réseaux sociaux</h2>
+    
+    <a href="https://www.instagram.com/studiohamedouattara/" target="_blank" class="link">
+      <span class="link-icon">📸</span>
+      <div class="link-content">
+        <div class="link-title">Instagram</div>
+        <div class="link-desc">@studiohamedouattara</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    
+    <a href="https://www.facebook.com/studiohamedouattara" target="_blank" class="link">
+      <span class="link-icon">📘</span>
+      <div class="link-content">
+        <div class="link-title">Studio Hamed Ouattara</div>
+        <div class="link-desc">Facebook · Page officielle</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    
+    <a href="https://www.linkedin.com/in/hamed-ouattara/" target="_blank" class="link">
+      <span class="link-icon">💼</span>
+      <div class="link-content">
+        <div class="link-title">LinkedIn</div>
+        <div class="link-desc">Hamed Ouattara</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    
+    <a href="https://www.facebook.com/" target="_blank" class="link">
+      <span class="link-icon">✍️</span>
+      <div class="link-content">
+        <div class="link-title">Brasonkabra</div>
+        <div class="link-desc">Facebook · Voix philosophique</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </section>
 
-🖼️
-Friedman Benda Gallery
-New York — Représentant exclusif
-→
-🌊
-Homo Faber 2026
-Venise, septembre 2026
-→
-CONTACT
+  <!-- CONTACT -->
+  <section class="section">
+    <h2 class="section-title">Contact</h2>
+    
+    <a href="mailto:studiohamedouattarabf@gmail.com" class="link">
+      <span class="link-icon">📧</span>
+      <div class="link-content">
+        <div class="link-title">Email studio</div>
+        <div class="link-desc">studiohamedouattarabf@gmail.com</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    
+    <a href="https://wa.me/22666306363" target="_blank" class="link">
+      <span class="link-icon">💬</span>
+      <div class="link-content">
+        <div class="link-title">WhatsApp</div>
+        <div class="link-desc">+226 66 30 63 63</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    
+    <a href="tel:+16463936511" class="link">
+      <span class="link-icon">📱</span>
+      <div class="link-content">
+        <div class="link-title">Phone USA</div>
+        <div class="link-desc">+1 646 393 6511</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </section>
 
-✉
-Email studio
-studiohamedouattarabf@gmail.com
-→
-📞
-WhatsApp
-+226 66 30 63 63
-→
-COPIER LE LIEN DE CETTE PAGE
-STUDIO HAMED OUATTARA  ·  IFU 00014869S
-Lien copié ✓
+  <!-- COPY LINK -->
+  <button class="copy-btn" onclick="copyLink(this)">
+    Copier le lien de cette page
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-brand">Studio Hamed Ouattara</p>
+    <p class="footer-text">
+      IFU 00014869S<br>
+      © 2026 · All rights reserved
+    </p>
+  </footer>
+
+</div>
+
+<script>
+  function copyLink(btn) {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(function() {
+      const originalText = btn.innerText;
+      btn.innerText = '✓ Lien copié';
+      btn.classList.add('copied');
+      setTimeout(function() {
+        btn.innerText = originalText;
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>
